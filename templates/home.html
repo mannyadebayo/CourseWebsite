@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="shortcut icon" type="img/png" href="/static/favicon.png">
+	<link rel="stylesheet" type="text/css" href="/static/home.css">
+	<title> CSCB20 - HOME </title>
+</head>
+<body>
+
+
+	<div class="container">
+			<a class="logo" href="{{ url_for('home')}}"> <img src="/static/uoftlogo.png"> </a>
+		<div class="menu">
+				
+		</div>
+
+	</div>
+
+	
+	<form method="post">
+
+		<div class="login">
+			<h1>Welcome to Web Programming and Databases - CSCB20 </h1>
+			<div class="option">
+				<ul>
+					<li>
+						<div class="button">
+							<a href="{{ url_for('student')}}" > STUDENT </a>
+							<a href="{{ url_for('instructor')}}" > INSTRUCTOR </a>
+						</div>
+						
+					</li>
+				</ul>
+			</div>
+			
+		</div>
+
+		<div class="firstdiv">
+			<img src="/static/homeconnect.png">
+			<img src="/static/homeins.png">
+		</div>
+		
+		<div class="login">
+			<h1> Join Now </h1>
+			<div class="option">
+				<ul>
+					<li>
+						<div class="button">
+							<a href="{{ url_for('student')}}" > STUDENT </a>
+							<a href="{{ url_for('instructor')}}" > INSTRUCTOR </a>
+						</div>
+						
+					</li>
+				</ul>
+			</div>
+			
+		</div>
+
+	<div class="footer"> 
+
+		<p> <a href="http://web.cs.toronto.edu/">  Uoft Department of Computer Science  </a> </p>
+		<p> Designed by Emmanuel and Patrick </p>
+
+	</div>
+
+</body>
+</html>

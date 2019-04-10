@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Feedback</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="..\static\instructorFeedback.css">
+	<link rel="shortcut icon" type="img/png" href="..\static\favicon.png">
+</head>
+
+	<!-- MENU -->
+
+	<div class="container">
+
+			<a class="logo" href="{{ url_for('index')}}"> <img src="..\static\logo.png"> </a>
+			<!-- This is for the 'Hamburger' Menu, link the label to the checkbox through ids -->
+			<label class="menu-icon" for="checkbox"> &#9776 </label>
+			<input type="checkbox" id="checkbox"/>
+
+		<div class="menu">
+				<a href="{{ url_for('index')}}"> Home </a>
+				<a href="{{ url_for('calendar')}}"> Calendar</a>
+				<a href="{{ url_for('announcements')}}"> Announcements </a>
+				<a href="{{ url_for('resources')}}"> Resources </a>
+				<a href="{{ url_for('lectures')}}"> Lectures </a>
+				<a href="{{ url_for('assignments')}}"> Assignments </a>
+				<a href="{{ url_for('statistics')}}"> Statistics </a>
+				<a class= "menu-1" href="{{ url_for('feedback')}}"> Feedbacks </a>
+				<a href="{{ url_for('grades')}}" > Grades </a>
+				<a href="{{ url_for('logout')}}" > LOG OUT </a>
+
+		</div>
+
+	</div>
+
+<body>
+	{% for name in instructor %}
+		<h1>{{name.firstname}}, here is what your students answered ...</h1>
+	{% endfor %}
+
+	<div class="box">
+		{% for item in answers %}
+			<div class='q1'>
+				<h2>What did you like about the instuctor teaching?</h2>
+				<p>{{item.question1}}</p>
+			</div>
+			<div class='q2'>
+				<h2>What would you recommend to the instructor in order for him/her to improve their teaching?</h2>
+				<p id='q2answers'>{{item.question2}}</p>
+			</div>
+			<div class = 'q3'>
+				<h2>What did you think about the labs and the TAs?</h2>
+				<p>{{item.question3}}</p>
+			</div>
+			<div class='q4'>
+				<h2>What would you recommend to the TA's in order for them to improve their teaching?</h2>
+				<p>{{item.question4}}</p>
+			</div>
+		{% endfor %}
+	</div>
+
+	
+
+	
+
+</body>
+</html>

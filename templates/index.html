@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- favicon -->
+	<link rel="shortcut icon" type="img/png" href="/static/favicon.png">
+	<link rel="stylesheet" type="text/css" href="/static/index.css">
+	<title> CSC B20 - Intro to Data Bases & Web Applications </title>
+</head>
+<body>
+
+	<!-- MENU -->
+
+	<div class="container">
+
+			<a class="logo" href="{{ url_for('index')}}"> <img src="/static/logo.png"> </a>
+			<!-- This is for the 'Hamburger' Menu, link the label to the checkbox through ids -->
+			<label class="menu-icon" for="checkbox"> &#9776 </label>
+			<input type="checkbox" id="checkbox"/>
+
+		<div class="menu">
+				<a class= "menu-1" href="{{ url_for('index')}}"> Home </a>
+				<a href="{{ url_for('calendar')}}"> Calendar</a>
+				<a href="{{ url_for('announcements')}}"> Announcements </a>
+				<a href="{{ url_for('resources')}}"> Resources </a>
+				<a href="{{ url_for('lectures')}}"> Lectures </a>
+				<a href="{{ url_for('assignments')}}"> Assignments </a>
+				<a href="{{ url_for('statistics')}}"> Statistics </a>
+				<a href="{{ url_for('feedback')}}"> Feedbacks </a>
+				<a href="{{ url_for('grades')}}" > Grades </a>
+				<a href="{{ url_for('logout')}}" > LOG OUT </a>
+
+		</div>
+
+	</div>
+
+
+<div class="content">
+
+	<div class="header">
+		<h1> CSC B20 - Introduction to Databases and Web Applications </h1>
+	</div>
+
+	<div class="about">
+		<h2> Course Description </h2>
+		<p>A practical introduction to databases and Web app development. Databases: terminology and applications; creating, querying and updating databases; the entity-relationship model for database design. Web documents and applications: static and interactive documents; Web servers and dynamic server-generated content; Web application development and interface with databases.
+		</p>
+		<p>Prerequisite Some experience with programming in an imperative language such as Python, Java or C.
+		Exclusion This course may not be taken after - or concurrently with - any C- or D-level CSC course.
+		<a href="http://www.utsc.utoronto.ca/~bretscher/b20/syllabus.pdf"> Course Syllabus </a>
+		</p>
+	</div>
+
+	<div class="ins-back">
+
+
+		<h2> Abbas Attarwala</h2>
+
+		<div class="instructor">
+
+			<div class="ins-image">
+				<img src="/static/abbas.jpg">
+			</div> 
+
+			<div class="ins-info">
+				<p> Abbas Attarwala is the Instructor for CSC B20
+				He has been teaching at The University of Scarborough for 5 years and
+				has a good background in Computer Engineering. He also teaches othere Computer 
+				Science Course at the Univeristy.
+				</p>			
+			</div>
+
+			<div class="ins-contact">
+				<p>Lectures: Mondays 9:00 am - 11:00 am </p>
+				<p> Email: MYFIRSTNAMEMYLASTNAME@utoronto.ca</p>
+				<p> Phone: XXX-XXX-XXXX</p>
+				<p> Office: IC-349</p>
+				<p> Office Hours: Mondays @ 11:00 am - 3:00 pm </p>
+			</div>
+
+		
+		</div>
+
+	</div>
+
+	<div class="map">
+
+		<h1> Location of Office </h1>
+
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2880.334995252499!2d-79.19186988450797!3d43.786661351808206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4da71edf433ed%3A0x6b28fdf0d56fdbcf!2sInstructional+Centre%2C+1095+Military+Trail%2C+Toronto%2C+ON!5e0!3m2!1sen!2sca!4v1552402040657" width="1000" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+	</div>
+
+</div>
+
+
+	<div class="footer"> 
+
+		<p> <a href="http://web.cs.toronto.edu/">  Uoft Department of Computer Science  </a> </p>
+		<p> Designed by Emmanuel and Patrick </p>
+
+	</div>
+
+
+</body>
+</html>

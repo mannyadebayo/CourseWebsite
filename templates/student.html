@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="shortcut icon" type="img/png" href="/static/favicon.png">
+	<link rel="stylesheet" type="text/css" href="/static/student.css">
+	<title> CSCB20 - Student Login </title>
+</head>
+<body>
+
+
+	<div class="container">
+			<a class="logo" href="{{ url_for('home')}}"> <img src="/static/uoftlogo.png"> </a>
+		<div class="menu">
+				
+		</div>
+
+	</div>
+
+		
+
+	<form method="post">
+		<div class="loginform">
+
+			<h1> Student Login</h1>
+
+			<p><input type=text name=username placeholder="username">
+			<p><input type=password name=password placeholder="password">
+			<p><input class="submitbtn" type=submit value="Log in">
+			<p> {{incorrect}}</p>
+			<a href="{{ url_for('student_signup')}}" > Create an Account </a> 
+		</div>
+		
+	</form>
+
+
+
+
+	<!-- For if students want to sign up -->
+	
+
+
+
+
+	<div class="footer"> 
+
+		<p> <a href="http://web.cs.toronto.edu/">  Uoft Department of Computer Science  </a> </p>
+		<p> Designed by Emmanuel and Patrick </p>
+
+	</div>
+
+</body>
+</html>

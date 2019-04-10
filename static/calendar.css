@@ -1,0 +1,133 @@
+body {
+	padding: 0px;
+	margin: 0px;
+	font-family: helvetica;
+	background-color: white;
+	text-align: center; 
+}
+
+.header{
+	text-align: center;
+	border-radius: 25px;
+	width:50%;
+	border: solid black;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 25px;
+	background-color: grey;
+	box-shadow: 10px 10px 5px grey;
+}
+
+.logo{
+	float: left;
+}
+
+.container{
+	top: 0;
+	background-color: black;
+	position: fixed;
+	width: 100%;
+	overflow: hidden;
+}
+
+.menu-icon{
+	color: white;
+	text-decoration: none;
+	font-size: 30px;
+	float: right;
+	margin-right: 20px;
+	margin-top: 10px;
+	display: none;
+	
+}
+
+#checkbox{
+	display: none;
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 1050px){
+
+	.menu-icon{
+	color: white;
+	text-decoration: none;
+	font-size: 40px;
+	float: right;
+	margin-top: 3px;
+	margin-right: 20px;
+	display: block;
+}
+
+	.menu { 
+		margin-top: 40px;
+		display: none;
+	}
+
+	.menu a{
+		display:block;
+		text-align: center;
+	}
+
+	#checkbox:checked + .menu{
+		display:block;
+	}
+		
+}
+
+
+
+.menu{
+	top: 0;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.menu a{
+	font-size: 17px;
+	text-decoration: none;
+	color: white;
+	padding: 20px;
+}
+.menu a:hover{
+	color: #FFCC99;
+}
+
+.menu .menu-2 {
+	color: #FF9933;
+}
+
+.footer{
+	width: 100%;
+	background-color: black;
+	bottom: 0;
+	padding: 0.4px;
+}
+
+.header{
+	margin-top: 90px;
+}
+
+.footer a, p{
+	text-decoration: none;
+	color: white;
+	text-align: center;
+	padding: 0px;
+	font-size: 10px;
+	width: 100%;
+
+}
+
+.footer a:hover{
+	color: #FF9933;
+}
+
+.myCalendar{
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.list li{
+	margin:15px;
+}

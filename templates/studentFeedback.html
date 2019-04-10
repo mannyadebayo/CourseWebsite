@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Feedback</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<!--<link rel="stylesheet" type="text/css" href="C:\Users\Owner\Dropbox\CSCB20\assignment3\static\index.css">-->
+	<link rel="stylesheet" type="text/css" href="..\static\studentFeedback.css">
+	<link rel="shortcut icon" type="img/png" href="..\static\favicon.png">
+</head>
+<body>
+
+	<h1>{{session}}</h1>
+
+	<div class="container">
+
+			<a class="logo" href="{{ url_for('index')}}"> <img src="..\static\logo.png"> </a>
+			<!-- This is for the 'Hamburger' Menu, link the label to the checkbox through ids -->
+			<label class="menu-icon" for="checkbox"> &#9776 </label>
+			<input type="checkbox" id="checkbox"/>
+
+		<div class="menu">
+				<a href="{{ url_for('index')}}"> Home </a>
+				<a href="{{ url_for('calendar')}}"> Calendar</a>
+				<a href="{{ url_for('announcements')}}"> Announcements </a>
+				<a href="{{ url_for('resources')}}"> Resources </a>
+				<a href="{{ url_for('lectures')}}"> Lectures </a>
+				<a href="{{ url_for('assignments')}}"> Assignments </a>
+				<a href="{{ url_for('statistics')}}"> Statistics </a>
+				<a class='menu-1' href="{{ url_for('feedback')}}"> Feedbacks </a>
+				<a href="{{ url_for('grades')}}" > Grades </a>
+				<a href="{{ url_for('logout')}}" > LOG OUT </a>
+
+		</div>
+
+	</div>
+	<div class='theBody'>
+		<h1 id='Title'>ANONYMOUS FEEDBACK</h1>
+		<p> {{response}} </p>
+		<p id='sentence'>Choose the instructor you'd like to give feedback to</p>
+		<form method='POST'class='feedbackForm'>
+			<select name='instructorName' onchange="showFeedbackForm()" id='dropdownMenu'>
+				{% for instructor in instructors %}
+				<option value ={{instructor.usernames}} name='instructorName'>{{instructor.firstname}} {{instructor.lastname}}</option>
+				{% endfor %}
+			</select>
+			<p id='message'>{{message}}</p>
+			<p id='question1'> What did you like about the instuctor teaching?:<br> <input type=text name=question1 id='Q1answer'></p>
+			<p id='question2'> What would you recommend to the instructor in order for him/her to improve their teaching?:<br> <input type=text name=question2 id='Q2answer'></p>
+			<p id='question3'> What did you think about the labs and the TAs?: <br> <input type=text name=question3 id='Q3answer'> </p>
+			<p id='question4'> What would you recommend to the TA's in order for them to improve their teaching?: <br> <input type=text name=question4 id='Q4answer'> </p>
+	        <p><input type=submit value=Submit id='feedbackButton'></p>
+		</form>
+		
+	</div>
+
+	<div class="footer"> 
+
+		<p> <a href="http://web.cs.toronto.edu/">  Uoft Department of Computer Science  </a> </p>
+		<p> Designed by Emmanuel and Patrick </p>
+
+	</div>
+
+	<script>
+		function hide(){
+			$(question1).hide();
+			$(Q1answer).hide();
+			$(question2).hide();
+			$(Q2answer).hide();
+			$(question3).hide();
+			$(Q3answer).hide();
+			$(question4).hide();
+			$(Q4answer).hide();
+			$(feebackButton).hide();	
+		}
+
+		function showFeedbackForm(){
+			$(question1).show();
+			$(Q1answer).show();
+			$(question2).show();
+			$(Q2answer).show();
+			$(question3).show();
+			$(Q3answer).show();
+			$(question4).show();
+			$(Q4answer).show();
+			$(feebackButton).show();
+			
+		}
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,130 @@
+body{
+	text-align: center; 
+}
+.content h1{
+	text-align: center;
+	color: #0C093F;
+}
+
+.tutorials{
+	padding: 50px;
+	background-color: #FF9933;
+	border-style: solid;
+	border-radius: 25px;
+}
+/* Centre BUTTONS */
+.but-div{
+	text-align: center;
+}
+
+.tut-button{
+	color: white;
+	padding: 15px;
+	border-style: solid;
+	border-width: 2px;
+	border-color: black;
+	border-radius: 10px;
+	cursor: pointer;
+	background-color: #0C093F;
+
+} 
+.tut-button:hover{
+	background-color: orange;
+}
+
+.tests{
+	margin-top: 10px;
+	padding: 40px;
+	background-color: #FF9933;
+	border-style: solid;
+	border-radius: 25px;
+	color: black;
+	font-size: 17px;
+	
+}
+
+.tests li, h4{
+	text-align: center;
+}
+
+.tests p{
+	color: black;
+	font-size: 17px;
+}
+.tests a:hover{
+	color: #0C093F;
+}
+
+/* TUTORIAL FOR SQL */
+.beg-tut{
+	margin-top: 10px;
+	padding: 15px;
+	background-color: #FF9933;
+	border-style: solid;
+	border-radius: 25px;
+}
+.beg-tut a{
+	text-decoration: none;
+	color: black;
+}
+.beg-tut a:hover{
+	color: #0C093F;
+}
+
+/* EMAILS */
+.email{
+	margin-top: 10px;
+	padding: 40px;
+	background-color: #FF9933;
+	border-style: solid;
+	border-radius: 25px;
+	color: black;
+}
+.email p{
+	color: black;
+	font-size: 17px;
+}
+
+/* DISCUSSION BOARD */
+.dis-board{
+	margin-top: 10px;
+	padding: 40px;
+	background-color: #FF9933;
+	border-style: solid;
+	border-radius: 25px;
+	color: black;
+}
+.dis-board p{
+	color: black;
+	font-size: 17px;
+}
+
+/* MATH LAB */
+.math-lab{
+	margin-top: 10px;
+	padding: 40px;
+	background-color: #FF9933;
+	border-style: solid;
+	border-radius: 25px;
+	color: black;
+}
+.math-lab p, a{
+	color: black;
+	font-size: 17px;
+	text-decoration: none;
+}
+.math-lab a:hover{
+	color: #0C093F;
+}
+
+
+
+
+
+
+
+
+
+
+
+

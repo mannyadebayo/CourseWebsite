@@ -1,0 +1,17 @@
+body{
+	text-align: center; 
+}
+.content h1{
+	text-align: center;
+	color: #0C093F;
+}
+
+.content p{
+	color: black;
+	font-size: 17px;
+	text-align: left;
+}
+
+.footer{
+	position: fixed;
+}

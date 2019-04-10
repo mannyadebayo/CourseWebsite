@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- favicon -->
+	<link rel="shortcut icon" type="img/png" href="/static/favicon.png">
+	<link rel="stylesheet" type="text/css" href="/static/assignments.css">
+	<title> Assignments - CSC B20 </title>
+</head>
+<body>
+<!-- MENU -->
+
+	<h1 class="header">Assignments</h1>
+
+	<div class="list">
+		<ul>
+			<li>Assignments will be posted on the course web page. Deadlines are fixed. No extension will be allowed.</li>
+			<li>All deliverables should be submitted electronically (through <a href="https://markus.utsc.utoronto.ca/cscb20w19"> <b> MarkUs</b>  </a>).</li>
+			<li>Assignments are due at 11:59 pm on their due date. Submit early to avoid last minute submission related problems. Email submission will not be be accepted unless markus is down. Email submission at the eleventh hour will be considered as late submission.</li>
+			<li>Few things to keep in mind, please read carefully:</li>
+			<ol>
+				<li><b>Late coursework.</b> You can turn in your assignment up to 2 days late, but this will cost you 10% of the maximum grade for every day you are late (i.e., an assignment turned 2 days late can get a maximum of 12/15). No assignment will be accepted after 2 days, and will be given a grade of 0. If you are struggling with an assignment, talk to the instructor or the TA’s for help well before the deadline.</li>
+				<li><b>Re-marking.</b> You have up to 5 days from the time the marked assignment is available for hand-back to ask for a re-mark. No assignment will be re-marked after this period. Details will be posted on the course’s newsgroup. If you are still dissatisfied after talking to the TA, then email the instructor to set an appointment.</li>
+				<li><b>Communications.</b> Your best bet for getting questions answered quickly is to post to the course discussion group. If you think your question is not appropriate for the newsgroup, feel free to email the instructor. Please make sure to include “CSC309” in the subject line of your email. Finally, before you email the instructor, please check the newsgroup; your question may have already been answered.</li>
+				<li><b>Cheating/Plagiarism.</b> The policy of your faculty or school will be in effect. You are encouraged to discuss problems with your classmates; however, all work that you submit must be your own. When you submit an assignment with your name on it, you are certifying that you have done the work on that assignment yourself. Remember that the penalty for cheating is always worse than handing in the assignment late.</li>
+			</ol>
+		</ul>
+	</div>
+
+	<div class="container">
+
+			<a class="logo" href="{{url_for('index')}}"> <img src="/static/logo.png"> </a>
+			<label class="menu-icon" for="checkbox"> &#9776 </label>
+			<input type="checkbox" id="checkbox"/>
+
+		<div class="menu">
+				<a class= "menu-1" href="{{ url_for('index')}}"> Home </a>
+				<a class= "menu-2" href="{{ url_for('calendar')}}"> Calendar</a>
+				<a class= "menu-1" href="{{ url_for('announcements')}}"> Announcements </a>
+				<a href="{{ url_for('resources')}}"> Resources </a>
+				<a href="{{ url_for('lectures')}}"> Lectures </a>
+				<a class = "menu-4" href="{{ url_for('assignments')}}"> Assignments </a>
+				<a class = "menu-3" href="{{ url_for('statistics')}}"> Statistics </a>
+				<a href="{{ url_for('feedback')}}"> Feedbacks </a>
+				<a href="{{ url_for('grades')}}" > Grades </a>
+				<a href="{{ url_for('logout')}}" > LOG OUT </a>
+
+		</div>
+
+	</div>
+
+	<div class="container2">
+		<div class="assignment1">
+			<h1>Assignment 1</h1>
+			<ul>
+				<li><a href="get-pip.py">Starter Code</a></li>
+				<ul>
+					<li>linked-list.py</li>
+					<li>Node.py</li>
+					<li>addNode.py</li>
+				</ul>
+			</ul>
+		</div>
+
+		<div class="assignment2">
+			<h1>Assignment 2</h1>
+			<ul>
+				<li><a href="get-pip.py">Starter Code</a></li>
+				<ul>
+					<li>website.py</li>
+					<li>homePage.py</li>
+					<li>aboutPage.py</li>
+				</ul>
+			</ul>
+		</div>
+
+		<div class="assignment3">
+			<h1>Assignment 3</h1>
+			<ul>
+				<li><a href="get-pip.py">Starter Code</a></li>
+				<ul>
+					<li>binaryTree.py</li>
+					<li>Tree.py</li>
+					<li>treeNode.py</li>
+				</ul>
+			</ul>
+		</div>
+	</div>
+
+	<div class="footer"> 
+		<p> <a href="http://web.cs.toronto.edu/">  Uoft Department of Computer Science  </a> </p>
+		<p> Designed by Emmanuel and Patrick </p>
+	</div>
+</body>
+</html>

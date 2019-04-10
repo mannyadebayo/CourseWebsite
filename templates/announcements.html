@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Announcements - CSC B20</title>
+	<!-- favicon -->
+	<link rel="shortcut icon" type="img/png" href="favicon.png">
+	<link rel="stylesheet" type="text/css" href="/static/index.css">
+	<link rel="stylesheet" type="text/css" href="/static/announcements.css">
+</head>
+<body>
+
+	<!-- MENU -->
+
+	<div class="container">
+
+			<a class="logo" href="{{ url_for('index')}}"> <img src="/static/logo.png"> </a>
+			<label class="menu-icon" for="checkbox"> &#9776 </label>
+			<input type="checkbox" id="checkbox"/>
+
+		<div class="menu">
+				<a href="{{ url_for('index')}}"> Home </a>
+				<a href="{{ url_for('calendar')}}"> Calendar</a>
+				<a class= "menu-1" href="{{ url_for('announcements')}}"> Announcements </a>
+				<a href="{{ url_for('resources')}}"> Resources </a>
+				<a href="{{ url_for('lectures')}}"> Lectures </a>
+				<a href="{{ url_for('assignments')}}"> Assignments </a>
+				<a href="{{ url_for('statistics')}}"> Statistics </a>
+				<a href="{{ url_for('feedback')}}"> Feedbacks </a>
+				<a href="{{ url_for('grades')}}" > Grades </a>
+				<a href="{{ url_for('logout')}}" > LOG OUT </a>
+
+		</div>
+
+	</div>
+
+	<div class="content">
+		
+		<h1> Announcments</h1>
+
+		<h3> Jan. 2</h3>
+		<p> Welcome to CSCB20. Please note that tutorials will begin in week 2 </p>
+
+		<h3> Jan. 8</h3>
+		<p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.  </p>
+
+	</div>
+
+
+	<div class="footer"> 
+
+		<p> <a href="http://web.cs.toronto.edu/">  Uoft Department of Computer Science  </a> </p>
+		<p> Designed by Emmanuel and Patrick </p>
+
+	</div>
+
+</body>
+</html>

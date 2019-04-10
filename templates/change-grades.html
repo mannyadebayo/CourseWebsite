@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> CSCB20 </title>
+	<link rel="shortcut icon" type="img/png" href="/static/favicon.png">
+	<link rel="stylesheet" type="text/css" href="/static/change-grades.css">
+	<link rel="stylesheet" type="text/css" href="/static/index.css">
+</head>
+<body>
+
+	<!-- MENU -->
+
+	<div class="container">
+
+			<a class="logo" href="{{ url_for('index')}}"> <img src="/static/logo.png"> </a>
+			<!-- This is for the 'Hamburger' Menu, link the label to the checkbox through ids -->
+			<label class="menu-icon" for="checkbox"> &#9776 </label>
+			<input type="checkbox" id="checkbox"/>
+
+		<div class="menu">
+				<a href="{{ url_for('index')}}"> Home </a>
+				<a href="{{ url_for('calendar')}}"> Calendar</a>
+				<a href="{{ url_for('announcements')}}"> Announcements </a>
+				<a href="{{ url_for('resources')}}"> Resources </a>
+				<a href="{{ url_for('lectures')}}"> Lectures </a>
+				<a href="{{ url_for('assignments')}}"> Assignments </a>
+				<a href="{{ url_for('statistics')}}"> Statistics </a>
+				<a href="{{ url_for('feedback')}}"> Feedbacks </a>
+				<a class= "menu-1" href="{{ url_for('grades')}}" > Grades </a>
+				<a href="{{ url_for('logout')}}" > LOG OUT </a>
+
+		</div>
+
+	</div>
+	<!-- END OF MENU -->
+
+	<div class="grades">
+		
+		{% for grade in student_grades %}
+		<h3 class="user"> Grades for {{grade.firstname}} {{grade.lastname}}( <b> {{grade.username}} </b> )</h3>
+
+		<div>
+			<p> Midterm: {{grade.midterm}}</p>
+		</div>
+
+		<div>
+			<p> Final Exam: {{grade.finalexam}}</p>
+		</div>
+
+		<div>
+			<p> assignmnet1: {{grade.assignment1}}</p>
+		</div>
+
+		<div>
+			<p> assignmnet2: {{grade.assignment2}}</p>
+		</div>
+		
+		<div>
+			<p> lab: {{grade.lab}}</p>
+		</div>
+		{% endfor %}
+	</div>
+
+
+
+	<!-- CHANGE THE GRADES -->
+	<form class="request" method="post" id="editmark">
+			<p> <input type=text name=midterm placeholder="Enter Midterm Grade">
+			<p> <input type=text name=finalexam placeholder="Enter Final Exam Grade">
+			<p> <input type=text name=assignment1 placeholder="Enter Assignment1 Grade">
+			<p> <input type=text name=assignment2 placeholder="Enter Assignment2 Grade">
+			<p> <input type=text name=lab placeholder="Enter Lab Grade">
+			<p><input class="submitbtn" type=submit value=Submit>
+	</form>
+
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Resources - CSC B20</title>
+	<!-- favicon -->
+	<link rel="shortcut icon" type="img/png" href="/static/favicon.png">
+	<link rel="stylesheet" type="text/css" href="/static/index.css">
+	<link rel="stylesheet" type="text/css" href="/static/resources.css">
+</head>
+<body>
+
+		<!-- MENU -->
+
+<div class="container">
+
+			<a class="logo" href="{{ url_for('index')}}"> <img src="/static/logo.png"> </a>
+			<label class="menu-icon" for="checkbox"> &#9776 </label>
+			<input type="checkbox" id="checkbox"/>
+
+		<div class="menu">
+				<a href="{{ url_for('index')}}"> Home </a>
+				<a href="{{ url_for('calendar')}}"> Calendar</a>
+				<a href="{{ url_for('announcements')}}"> Announcements </a>
+				<a class= "menu-1" href="{{ url_for('resources')}}"> Resources </a>
+				<a href="{{ url_for('lectures')}}"> Lectures </a>
+				<a href="{{ url_for('assignments')}}"> Assignments </a>
+				<a href="{{ url_for('statistics')}}"> Statistics </a>
+				<a href="{{ url_for('feedback')}}"> Feedbacks </a>
+				<a href="{{ url_for('grades')}}" > Grades </a>
+				<a href="{{ url_for('logout')}}" > LOG OUT </a>
+
+		</div>
+
+	</div>
+
+
+	<div class="content">
+		<h1> Online Resources </h1>
+
+		<div class="tutorials">
+			<h2> Tutorials </h2>
+			<div class="but-div">
+				<a class= "tut-link" href="{{ url_for('tutorials')}}"> <button class="tut-button" type="button"> Click Here For Tutorial Info / Labs </button> </a>
+			</div>
+		</div>
+
+		<div class="tests">
+			<h2> Midterm </h2>
+			<p> There will be one midterm. The midterm will be 75min in length. You should go to either HW215 or HW216 depending on your last name as shown here. </p>
+
+			<h4> Room Allocations </h4>
+			<p> Monday 13th of February @ 5:00 pm </p>
+			<p> Room #: HW 215 = Last Name: A - HE </p>
+			<p> Room #: HW 216 = Last Name: HO - Z </p>
+
+			<h4> Preparing For the Midterm </h4>
+			<ul>
+				<li> Understand all parts of A1  </li>
+				<li> The midterm will cover everything on databases that we did from the start until part way through the week 6 lecture </li>
+			</ul>
+			<p> Once you have done some preparation, you can practice on a previous midterm: <a href="http://www.utsc.utoronto.ca/~bretscher/b20/tests/testA.pdf"> Term Test </a> </p>
+		</div>
+
+		<div class="beg-tut">
+			<h2> Beginner Tutorial for <a href="https://code.tutsplus.com/articles/sql-for-beginners--net-8200"> MySQL</a></h2>
+		</div>
+
+		<div class="email">
+			<h2> Email Communication</h2>
+			<p> Questions regarding the course material, assignments, midterm, etc. should be posed on the bulletin board. Questions about the assignment which you feel you cannot formulate without revealing your solution (should be very rare!), as well as questions and concerns regarding your personal matters should be directed to the instructor. </p>
+			
+		</div>
+
+		<div class="dis-board">
+			<h2> Discussion Board</h2>
+			<div class="but-div">
+				<a href="https://piazza.com/utoronto.ca/winter2017/cscb20"> <button class="tut-button" type="button"> Discussion Board </button> </a>
+			</div>
+			<p>You are encouraged to use the bulletin board to discuss the course material, pose questions on the assignments, etc. The bulletin board will be monitored by the instructor and by your TAs. Please, be very careful not to reveal (parts of) your solution on the bulletin board.</p>
+
+		</div>
+
+
+		<div class="math-lab">
+			<h2> Logging into MathLab</h2>
+			<p>
+				1. Mac OS comes with the application "terminal". Simple click on it to run. Login to mathlab by typing: 
+				<i> ssh utorid@mathlab.utsc.utoronto.ca </i> Enter your password. 
+				<br> <br>
+				2. Windows - you will need a SSH client. PuTTY is a good free one. <br> You can download and install here: 
+				<a href="https://www.putty.org/"> PuTTY</a>. <br> Use the same command as above to login to mathlab: 
+				<i> ssh utorid@mathlab.utsc.utoronto.ca </i>
+			</p>
+
+		</div>
+
+
+		
+
+		
+
+	</div>
+
+
+	<div class="footer"> 
+
+		<p> <a href="http://web.cs.toronto.edu/">  Uoft Department of Computer Science  </a> </p>
+		<p> Designed by Emmanuel and Patrick </p>
+
+	</div>
+
+</body>
+</html>

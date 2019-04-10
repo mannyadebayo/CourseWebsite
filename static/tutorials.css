@@ -1,0 +1,101 @@
+body{
+	text-align: center; 
+}
+.header h1{
+	text-align: center;
+	color: #0C093F;
+}
+
+.header p{
+	color: black;
+	font-size: 17px;
+}
+a{
+	text-decoration: none;
+	color: black;
+}
+a:hover{
+	color: orange;
+}
+
+.tut-2-4{
+	display: flex;
+	padding: 25px;
+	text-align: center;
+}
+
+.tut-2-4 div{
+	border: 1px solid;
+	border-radius: 20px;
+	background-color: grey;
+	box-shadow: 20px 20px 10px grey;
+}
+
+
+
+.tut-5-7{
+	display: flex;
+	padding: 25px;
+	text-align: center;
+}
+
+.tut-5-7 div{
+	border: 1px solid;
+	border-radius: 20px;
+	background-color: grey;
+	box-shadow: 20px 20px 10px grey;
+}
+
+
+
+.tut-8-10{
+	display: flex;
+	padding: 25px;
+	text-align: center;
+}
+
+.tut-8-10 div{
+	border: 1px solid;
+	border-radius: 20px;
+	background-color: grey;
+	box-shadow: 20px 20px 10px grey;
+}
+
+
+
+
+
+
+.week-2-tut{
+	flex: 1;
+}
+.week-3-tut{
+	flex: 1;
+}
+.week-4-tut{
+	flex: 1;
+}
+.week-5-tut{
+	flex: 1;
+}
+.week-6-tut{
+	flex: 1;
+}
+.week-7-tut{
+	flex: 1;
+}
+
+.week-8-tut{
+	flex: 1;
+}
+.week-9-tut{
+	flex: 1;
+}
+.week-10-tut{
+	flex: 1;
+}
+
+
+
+
+

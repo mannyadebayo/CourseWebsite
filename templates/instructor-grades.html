@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="shortcut icon" type="img/png" href="/static/favicon.png">
+	<link rel="stylesheet" type="text/css" href="instructor-grades.css">
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<title> CSCB20 - Instructor Grades</title>
+</head>
+<body onload="hide()">
+
+
+	<!-- MENU -->
+
+	<div class="container">
+
+			<a class="logo" href="{{ url_for('index')}}"> <img src="/static/logo.png"> </a>
+			<!-- This is for the 'Hamburger' Menu, link the label to the checkbox through ids -->
+			<label class="menu-icon" for="checkbox"> &#9776 </label>
+			<input type="checkbox" id="checkbox"/>
+
+		<div class="menu">
+				<a href="{{ url_for('index')}}"> Home </a>
+				<a href="{{ url_for('calendar')}}"> Calendar</a>
+				<a href="{{ url_for('announcements')}}"> Announcements </a>
+				<a href="{{ url_for('resources')}}"> Resources </a>
+				<a href="{{ url_for('lectures')}}"> Lectures </a>
+				<a href="{{ url_for('assignments')}}"> Assignments </a>
+				<a href="{{ url_for('statistics')}}"> Statistics </a>
+				<a href="{{ url_for('feedback')}}"> Feedbacks </a>
+				<a class= "menu-1" href="{{ url_for('grades')}}" > Grades </a>
+				<a href="{{ url_for('logout')}}" > LOG OUT </a>
+
+		</div>
+
+	</div>
+	<!-- END OF MENU -->
+
+	
+	<div class="students" >
+		<h2> Choose a Student </h2>
+		<form method="POST">
+			<select name="username" id='dropDownMenu'>
+			{% for student in students %}
+	    	<option value={{student.username}} name='username'>{{student.username}} {{student.firstname}} {{student.lastname}}</option>
+	    	{% endfor %}
+	  		</select>
+	  		<input onclick="pick()" class="submitbtn"  type="submit" value="Submit">
+		</form>
+	</div>
+
+	
+
+	<div class="grades">
+		<!-- now show the student's grades -->
+		{% for grade in student_grades%}
+		<h1> {{grade.firstname}} {{grade.lastname}} ( <b> {{grade.username}} </b>  )</h1>
+		<div>
+			<p> Midterm Grade: {{grade.midterm}}</p>
+			<p> Remark Request: {{grade.midtermremark}}</p>
+		</div>
+
+		<div>
+			<p> Final Exam Grade: {{grade.finalexam}}</p>
+			<p> Remark Request: {{grade.finalremark}}</p>
+		</div>
+
+		<div>
+			<p> Assignmnet 1 Grade: {{grade.assignment1}}</p>
+			<p> Remark Request: {{grade.a1remark}}</p>
+		</div>
+
+		<div>
+			<p> Assignmnet 2 Grade: {{grade.assignment2}}</p>
+			<p> Remark Request: {{grade.a2remark}}</p>
+		</div>
+
+		<div>
+			<p> Lab Grade: {{grade.lab}}</p>
+			<p> Remark Request: {{grade.labremark}}</p>
+		</div>
+		{% endfor %}
+
+	</div>
+	
+
+	{% if button == 'true' %}
+	
+		<a class="gradechange" href="{{ url_for('change_grades')}}" > Input Grades </a>
+	
+	{% endif %}
+
+	<!-- CHANGE THE GRADES 
+	<form method="post" id="editmark">
+			<p> Input Midterm Grade: <input type=text name=midterm>
+			<p> Input Final Exam Grade: <input type=text name=finalexam>
+			<p> Input Assignment 1 Grade: <input type=text name=assignment1>
+			<p> Input Assignment 2 Grade: <input type=text name=assignment2>
+			<p> Input Lab Grade: <input type=text name=lab>
+			<p><input type=submit value=Submit>
+	</form>
+	
+	<p>{{selectstudent}}</p>
+	-->
+	<!--
+	<div id="footer"> 
+
+		<p> <a href="http://web.cs.toronto.edu/">  Uoft Department of Computer Science  </a> </p>
+		<p> Designed by Emmanuel and Patrick </p>
+
+	</div>
+-->
+
+	
+	
+
+<!-- YOUR JAVASCRIPT FUNCTIONS -->
+
+<script>
+	
+	function hide(){
+		$('#editmark').hide();
+	}
+
+	function pick(){
+		$( "#footer" ).css( "position", "relative" );
+	}
+</script>
+	
+
+</body>
+</html>

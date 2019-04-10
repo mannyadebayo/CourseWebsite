@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- favicon -->
+	<link rel="shortcut icon" type="img/png" href="/static/favicon.png">
+	<link rel="stylesheet" type="text/css" href="/static/calendar.css">
+	<title> Calendar - CSC B20 </title>
+</head>
+<body>
+	<h1 class="header"><center>Course Calendar</center></h1>
+<!--
+	<ul class="list">
+		<li>On the course calendar shown below, you can find:</li>
+		<ol>
+			<li><b>The dates on which you'll have your weekly quizzes in your respective tutorials</b></li>
+			<li><b>The dates on which you'll have your term tests</b></li>
+			<li><b>The different lecture times and sections for the course</b></li>
+			<li><b>Tutorials times and location</b></li>
+		</ol>
+	</ul>
+-->
+<!-- MENU -->
+	<div class="container">
+			<a class="logo" href=""> <img src="/static/logo.png"> </a>
+			<label class="menu-icon" for="checkbox"> &#9776 </label>
+			<input type="checkbox" id="checkbox"/>
+
+		<div class="menu">
+				<a class= "menu-1" href="{{ url_for('index')}}">Home </a>
+				<a class= "menu-2" href="{{ url_for('calendar')}}"> Calendar</a>
+				<a href="{{ url_for('announcements')}}"> Announcements </a>
+				<a href="{{ url_for('resources')}}"> Resources </a>
+				<a href="{{ url_for('lectures')}}"> Lectures </a>
+				<a class = "menu-4" href="{{ url_for('assignments')}}"> Assignments </a>
+				<a class = "menu-3" href="{{ url_for('statistics')}}"> Statistics </a>
+				<a href="{{ url_for('feedback')}}"> Feedbacks </a>
+				<a href="{{ url_for('grades')}}" > Grades </a>
+				<a href="{{ url_for('logout')}}" > LOG OUT </a>
+
+		</div>
+
+	</div>
+
+	<div class="myCalendar">
+			<iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=anoeanuil%40gmail.com&amp;color=%2329527A&amp;ctz=America%2FToronto" style="border:solid 1px #777" width=90% height="600" frameborder="0" scrolling="no"></iframe>
+	</div>
+
+	<div class="footer">
+		<p> <a href="http://web.cs.toronto.edu/">  Uoft Department of Computer Science  </a> </p>
+		<p> Designed by Emmanuel and Patrick </p>
+	</div>
+
+</body>
+</html>

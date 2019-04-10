@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Log In</title>
+	<link rel="shortcut icon" type="img/png" href="/static/favicon.png">
+	<link rel="stylesheet" type="text/css" href="/static/student.css">
+</head>
+<body>
+
+	<div class="container">
+			<a class="logo" href="{{ url_for('home')}}"> <img src="/static/uoftlogo.png"> </a>
+		<div class="menu">
+				
+		</div>
+
+	</div>
+
+
+
+	<form method="post">
+		<div class="loginform">
+			<h1> Instructor Login</h1>
+            <p> <input type=text name=username placeholder="username">
+            <p> <input type=password name=password placeholder="password">
+            <p><input class="submitbtn" type=submit value="Log In">
+            	<p>{{incorrect}}</p>
+            <a href="{{ url_for('instructorSignup')}}"> SIGN UP </a>
+         </div>
+    </form>
+    
+
+	
+	
+
+	<div class="footer"> 
+
+		<p> <a href="http://web.cs.toronto.edu/">  Uoft Department of Computer Science  </a> </p>
+		<p> Designed by Emmanuel and Patrick </p>
+
+	</div>
+
+</body>
+</html>

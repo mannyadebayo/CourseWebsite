@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- favicon -->
+	<link rel="shortcut icon" type="img/png" href="/static/favicon.png">
+	<link rel="stylesheet" type="text/css" href="/static/statistics.css">
+	<title> Statistics - CSC B20 </title>
+</head>
+<body>
+<!-- MENU -->
+	<h1 class="header">Distributions</h1>
+	<div class="container">
+
+			<a class="logo" href="{{ url_for('index')}}"> <img src="/static/logo.png"> </a>
+			<label class="menu-icon" for="checkbox"> &#9776 </label>
+			<input type="checkbox" id="checkbox"/>
+
+		<div class="menu">
+				<a class= "menu-1" href="{{ url_for('index')}}">Home </a>
+				<a class= "menu-2" href="{{ url_for('calendar')}}"> Calendar</a>
+				<a href="{{ url_for('announcements')}}"> Announcements </a>
+				<a href="{{ url_for('resources')}}"> Resources </a>
+				<a href="{{ url_for('lectures')}}"> Lectures </a>
+				<a class = "menu-4" href="{{ url_for('assignments')}}"> Assignments </a>
+				<a class = "menu-3" href="{{ url_for('statistics')}}"> Statistics </a>
+				<a href="{{ url_for('feedback')}}"> Feedbacks </a>
+				<a href="{{ url_for('grades')}}" > Grades </a>
+				<a href="{{ url_for('logout')}}" > LOG OUT </a>
+
+		</div>
+
+	</div>
+
+	<div class="container2">
+		<div class="midterm1">
+			<h1>Term Test 1 Distribution</h1>
+			<a class="chart1" href=""> <img src="/static/bar-chart.png" width=90%></a>
+		</div>
+
+		<div class = "midterm2">
+			<h1>Term Test 2 Distribution</h1>
+			<a class="chart2" href=""> <img src="static/bar-chart2.png" width=70%></a>
+		</div>
+	</div>
+
+	<div class="footer"> 
+		<p> <a href="http://web.cs.toronto.edu/">  Uoft Department of Computer Science  </a> </p>
+		<p> Designed by Emmanuel and Patrick </p>
+	</div>
+</body>
+</html>
