@@ -1,0 +1,1 @@
+As a student, I'd like to be able to access the course website on a mobile device in such a way that the webpage fits neatly on the screen of that particular device.

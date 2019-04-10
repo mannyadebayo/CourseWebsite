@@ -1,0 +1,1 @@
+As a TA, I'd like to be able to see other TAs' information such as e-mail, office hours and tutorials
