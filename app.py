@@ -4,7 +4,7 @@ from sqlalchemy.sql import text
 
 app=Flask(__name__)
 app.secret_key = b'abbas'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///assignment3.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///course.db'
 db = SQLAlchemy(app)
 
 
