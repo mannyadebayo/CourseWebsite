@@ -3,10 +3,9 @@ from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.sql import text
 
 app=Flask(__name__)
-app.secret_key=b'abbas'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///course.db'
+app.secret_key = b'abbas'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///assignment3.db'
 db = SQLAlchemy(app)
-
 
 
 # given a query, executes and returns the result
@@ -20,11 +19,10 @@ def query_db(query, args=(), one=False):
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
-	if 'username' in session:
-		return redirect(url_for('index'))
-	else:
-		return render_template('home.html')
-
+    if 'username' in session:
+        return redirect(url_for('index'))
+    else:
+        return render_template('home.html')
 
 
 # To keep track of who is logged in
@@ -43,8 +41,8 @@ def instructor():
         # loop through the returned query to get all rows with username the one entered by the user
         for item in results:
             if item['usernames'] == myUsername and item['password'] == myPassword:
-            	global instructor_username
-            	instructor_username = request.form['username']
+                global instructor_username
+                instructor_username = request.form['username']
                 session['username']=myUsername, 'instructor'
                 return redirect(url_for('home'))
         incorrect = 'Incorrect password or username'
@@ -63,7 +61,7 @@ def instructorSignup():
         username = '"' + request.form['username'] + '"'
         password = '"' + request.form['password'] + '"'
         myQuery = "SELECT * FROM Instructors where usernames is " + '"' + request.form['username'] + '"'
-        insert_Query = "INSERT INTO Instructors (firstname, lastname, usernames, password) values(" + firstname + "," + lastname + ',' + username + ',' + password + ')' 
+       	insert_Query = "INSERT INTO Instructors (firstname, lastname, usernames, password) values(" + firstname + "," + lastname + ',' + username + ',' + password + ')' 
         results = db.engine.execute(text(myQuery))
         for item in results:
             items.append(item)
