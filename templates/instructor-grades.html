@@ -3,8 +3,8 @@
 <head>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<link rel="shortcut icon" type="img/png" href="/static/favicon.png">
-	<link rel="stylesheet" type="text/css" href="instructor-grades.css">
-	<link rel="stylesheet" type="text/css" href="index.css">
+	<link rel="stylesheet" type="text/css" href="/static/instructor-grades.css">
+	<link rel="stylesheet" type="text/css" href="/static/index.css">
 	<title> CSCB20 - Instructor Grades</title>
 </head>
 <body onload="hide()">
@@ -21,12 +21,9 @@
 
 		<div class="menu">
 				<a href="{{ url_for('index')}}"> Home </a>
-				<a href="{{ url_for('calendar')}}"> Calendar</a>
-				<a href="{{ url_for('announcements')}}"> Announcements </a>
 				<a href="{{ url_for('resources')}}"> Resources </a>
 				<a href="{{ url_for('lectures')}}"> Lectures </a>
 				<a href="{{ url_for('assignments')}}"> Assignments </a>
-				<a href="{{ url_for('statistics')}}"> Statistics </a>
 				<a href="{{ url_for('feedback')}}"> Feedbacks </a>
 				<a class= "menu-1" href="{{ url_for('grades')}}" > Grades </a>
 				<a href="{{ url_for('logout')}}" > LOG OUT </a>
@@ -90,7 +87,9 @@
 	
 	{% endif %}
 
-	<!-- CHANGE THE GRADES 
+	<!--
+
+	 CHANGE THE GRADES 
 	<form method="post" id="editmark">
 			<p> Input Midterm Grade: <input type=text name=midterm>
 			<p> Input Final Exam Grade: <input type=text name=finalexam>
@@ -99,9 +98,10 @@
 			<p> Input Lab Grade: <input type=text name=lab>
 			<p><input type=submit value=Submit>
 	</form>
+	-->
 	
 	<p>{{selectstudent}}</p>
-	-->
+	
 	<!--
 	<div id="footer"> 
 
